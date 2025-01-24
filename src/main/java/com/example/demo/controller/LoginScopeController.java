@@ -11,20 +11,30 @@ import jakarta.servlet.http.HttpSession;
 public class LoginScopeController {
     @Autowired
     private HttpSession session;
+        
 
-    @RequestMapping("")
-    public String index(){
-        return "result-login-scope";
+    
+        @RequestMapping("")
+        public String index(){
+            return "login-scope";
+        }
+        @RequestMapping("/input-address")
+        public String inputAddress(String keyEmail,String keyPass){
+            String email="test@example.com";
+            String pass="123";
+            
+        if(email.equals(keyEmail) && pass.equals(keyPass)){
+            session.setAttribute("keyEmail",keyEmail );
+            session.setAttribute("keyPass", keyPass);
+        return "mypage";   
+        } 
+        else{
+            return "login-scope";
+        }
     }
-    @RequestMapping("/input-ac")
-    public String inputAc(){
-        String email= inputac.getN
-        if(email== test@example.com)
+        @RequestMapping("/mypage")
+        public String myPage(){
         return "result-login-scope";
         
     }
-    
-    
-
-
 }

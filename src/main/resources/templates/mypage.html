@@ -6,9 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <span th:text="${session.keyEmail}">aaa</span><br>
-    <span th:text="${session.keyPass}">aaa</span><br>
-   
-    
+    <form >
+    <span th:text="${session.keyEmail}">aaa</span>さんこんにちは<br>
+    <a href="result-login-scope.html"
+    th:href="@{/login-scope/mypage}">マイページへ</a>
+    </form>
 </body>
 </html>
