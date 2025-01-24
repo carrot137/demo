@@ -1,29 +1,33 @@
 package com.example.demo.form;
 
 public class Number {
-    private String a;
-    private String b;
-    private String sum1=a+b;
-
-    public String getA() {
-        return a;
-    }
-    public void setA(String a) {
-        this.a = a;
-    }
-    public String getB() {
-        return b;
-    }
-    public void setB(String b) {
-        this.b = b;
-    }
-    public String getSum() {
-        return sum1;
-    }
-    public void setSum(String sum) {
-        this.sum1 = sum;
-    }
+    private String num1;
+    private String operator;
+    private String num2;
     
+    public String getNum1() {
+        return num1;
+    }
+    public void setNum1(String num1) {
+        this.num1 = num1;
+    }
+    public String getOperator() {
+        return operator;
+    }
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+    public String getNum2() {
+        return num2;
+    }
+    public void setNum2(String num2) {
+        this.num2 = num2;
+    }
+    @Override
+    public String toString() {
+        return "CalcForm [num1=" + num1 + ", operator=" + operator + ", num2=" + num2 + "]";
+    }
+
     
 
 
